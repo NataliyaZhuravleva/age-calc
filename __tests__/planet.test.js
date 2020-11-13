@@ -12,5 +12,5 @@ describe('Planet', ()=>{
     planet=new Planet("Mercury", 0.24);
     expect(planet.name).toEqual("Mercury");
     expect(planet.ratio).toEqual(0.24);
-  })
+  });
 });

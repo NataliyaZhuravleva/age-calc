@@ -13,7 +13,8 @@ describe('Planets', ()=>{
   });
   test ("Should correctly add planets to planetsArray", ()=>{
     let Earth=new Planet("Earth", 1);
-    let planets=new Planets(Earth);
-    expect(planets.addPlanets(Earth)).toEqual([{"name": "Earth", "ratio": 1}]);
+    let planets=new Planets();
+    planets.addPlanets(Earth);
+    expect(planets.planetsArray).toEqual([Earth]);
   })
 });

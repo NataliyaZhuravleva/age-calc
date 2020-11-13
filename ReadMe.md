@@ -82,6 +82,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>{"name": "Earth", "ratio": 1}</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>5</td>
+    <td>Should correctly add planets to planetsArray</td>
+    <td>planets.addPlanets(Earth)</td>
+    <td>planets.planetsArray=[Earth]</td>
+    <td>True</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 

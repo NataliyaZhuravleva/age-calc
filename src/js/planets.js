@@ -1,10 +1,10 @@
 import Planet from '../js/planet.js';
-export default class Planets{
-  constructor(){
-    this.planetsArray=[];
+export default class Planets {
+  constructor() {
+    this.planetsArray = [];
   }
 
-  addPlanets(){
-   
+  addPlanets(planet) {
+    this.planetsArray.push(planet);
   }
 }
