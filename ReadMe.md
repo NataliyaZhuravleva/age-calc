@@ -48,15 +48,17 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
 
 <table>
   <tr>
+    <th>ID
     <th>Test</th>
     <th>Input</th>
     <th>Output</th>
     <th>Completed</th>
   </tr>
   <tr>
-    <td>Should correctly TODO</td>
-    <td>TODO</td>
-    <td>TODO</td>
+    <td>1</td>
+    <td>Should correctly create User class with user's age</td>
+    <td>user.age</td>
+    <td>35</td>
     <td>False</td>
   </tr>
 </table>
