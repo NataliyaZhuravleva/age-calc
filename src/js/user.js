@@ -1,7 +1,5 @@
-//import Planets from '../js/planets';
-
 export default class User {
-  constructor(age) {
+  constructor(age, country) {
     this.age = age;
     this.agesArray = [];
   }

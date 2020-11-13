@@ -7,7 +7,7 @@ describe('User', () => {
   let user;
   let planets;
   beforeEach(() => {
-    user = new User(35);
+    user = new User(35, "USA");
   });
 
   test("Should correctly create User class with user's age", () => {
@@ -25,9 +25,12 @@ describe('User', () => {
     planets.addPlanets(Venus);
     planets.addPlanets(Mars);
     planets.addPlanets(Jupiter);
-    user = new User(35);
     user.calculateAge(planets);
   
     expect(user.agesArray).toEqual([35, 8.4, 21.7, 65.8, 415.1]);
+  });
+
+  test("Should correctly create User class with user's country", () => {
+    expect(user.country).toEqual("USA");
   });
 });

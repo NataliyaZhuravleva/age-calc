@@ -96,6 +96,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>user.agesArray=[35, 8.4, 21.7, 65.8, 415.1]</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>7</td>
+    <td>Should correctly create User class with user's country</td>
+    <td>user.country</td>
+    <td>"USA"</td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 
