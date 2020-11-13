@@ -66,6 +66,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly create Planet class with planet name</td>
     <td>planet.name</td>
     <td>"Earth"</td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Should correctly create Planet class with planet name and ratio</td>
+    <td>planet.ratio</td>
+    <td>0.24</td>
     <td>False</td>
   </tr>
 </table>
