@@ -73,7 +73,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly create Planet class with planet name and ratio</td>
     <td>planet.ratio</td>
     <td>0.24</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 

@@ -1,5 +1,6 @@
 export default class Planet{
-  constructor(name){
-   this.name=name;
+  constructor(name, ratio){
+    this.name=name;
+    this.ratio=ratio;
   }
 }
