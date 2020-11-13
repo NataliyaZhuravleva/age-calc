@@ -75,6 +75,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>0.24</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>4</td>
+    <td>Should correctly create Planets class with planetsArray</td>
+    <td>planets.planetsArray[0]</td>
+    <td>{"name": "Earth", "ratio": 1}</td>
+    <td>True</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 

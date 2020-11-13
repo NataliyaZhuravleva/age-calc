@@ -8,6 +8,7 @@ describe('Planets', ()=>{
   test("Should correctly create Planets class with planetsArray",()=>{
     planet=new Planet("Earth", 1);
     planets=new Planets(planet);
-    expect(planets.planetsArray).toEqual(["Earth", 1]);
+    planets.planetsArray[0]=planet;
+    expect(planets.planetsArray[0]).toEqual({"name": "Earth", "ratio": 1});
   });
 });
