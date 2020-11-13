@@ -16,5 +16,5 @@ describe('Planets', ()=>{
     let planets=new Planets();
     planets.addPlanets(Earth);
     expect(planets.planetsArray).toEqual([Earth]);
-  })
+  });
 });
