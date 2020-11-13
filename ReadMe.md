@@ -59,7 +59,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly create User class with user's age</td>
     <td>user.age</td>
     <td>35</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 
