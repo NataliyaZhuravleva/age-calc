@@ -25,7 +25,9 @@ describe('User', () => {
     planets.addPlanets(Venus);
     planets.addPlanets(Mars);
     planets.addPlanets(Jupiter);
-    user.calculateAge(user.age);
+    user = new User(35);
+    user.calculateAge(planets);
+  
     expect(user.agesArray).toEqual([35, 8.4, 21.7, 65.8, 415.1]);
   });
 });
