@@ -61,6 +61,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>35</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>2</td>
+    <td>Should correctly create Planet class with planet name</td>
+    <td>planet.name</td>
+    <td>"Earth"</td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 
