@@ -89,6 +89,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>planets.planetsArray=[Earth]</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>6</td>
+    <td>Should correctly calculate user's age in planet years and add them to agesArray</td>
+    <td>user.calculateAge(35)</td>
+    <td>user.agesArray=[35, 8.4, 21.7, 65.8, 415.1]</td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 
