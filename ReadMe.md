@@ -101,7 +101,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly create User class with user's country</td>
     <td>user.country</td>
     <td>"USA"</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 

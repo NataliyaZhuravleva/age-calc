@@ -2,6 +2,7 @@ export default class User {
   constructor(age, country) {
     this.age = age;
     this.agesArray = [];
+    this.country=country;
   }
 
   calculateAge(planets) {
