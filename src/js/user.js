@@ -12,8 +12,9 @@ export default class User {
     }, this);
   }
 
-  calculateLifeExpectancy() {
-    this.lifeExpectancyArray.push(this.country.averageLifeExpectancy);
-
+  calculateLifeExpectancy(planets) {
+    planets.planetsArray.forEach(function (element) {
+      this.lifeExpectancyArray.push(parseFloat((this.country.averageLifeExpectancy*element.ratio).toFixed(1)));
+    }, this);
   }
 }

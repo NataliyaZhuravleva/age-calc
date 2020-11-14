@@ -138,6 +138,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>user.lifeExpectancyArray=[79]</td>
     <td>True</td>
   </tr>
+   <tr>
+    <td>12</td>
+    <td>Should correctly calculate user's life expectancy on all planets and add them to lifeExpectancyArray</td>
+    <td>user.calculateLifeExpectancy()</td>
+    <td>user.lifeExpectancyArray=[79, 18.9,48.9, 148.5, 936.9]</td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 

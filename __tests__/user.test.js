@@ -48,8 +48,30 @@ describe('User', () => {
     countries.addCountries(USA);
 
     user.calculateAge(planets);
+    user.calculateLifeExpectancy(planets);
+    expect(user.lifeExpectancyArray).toEqual([79]);
+  });
+
+  test("Should correctly calculate user's life expectancy on all planets and add them to lifeExpectancyArray", () => {
+    user = new User(35, "USA");
+    const Earth = new Planet("Earth", 1);
+    const Mercury = new Planet("Mercury", 0.24);
+    const Venus = new Planet("Venus", 0.62);
+    const Mars = new Planet("Mars", 1.88);
+    const Jupiter = new Planet("Jupiter", 11.86);
+    planets = new Planets();
+    planets.addPlanets(Earth);
+    planets.addPlanets(Mercury);
+    planets.addPlanets(Venus);
+    planets.addPlanets(Mars);
+    planets.addPlanets(Jupiter);
+
+    const USA = new Country(1, "USA", 79);
+    countries = new Countries();
+    countries.addCountries(USA);
+
+    user.calculateAge(planets);
     user.calculateLifeExpectancy();
-    //expect(user.country.averageLifeExpectancy).toEqual(79);
     expect(user.lifeExpectancyArray).toEqual([79]);
   });
 });
