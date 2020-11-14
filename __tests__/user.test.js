@@ -53,7 +53,7 @@ describe('User', () => {
   });
 
   test("Should correctly calculate user's life expectancy on all planets and add them to lifeExpectancyArray", () => {
-    user = new User(35, "USA");
+
     const Earth = new Planet("Earth", 1);
     const Mercury = new Planet("Mercury", 0.24);
     const Venus = new Planet("Venus", 0.62);
@@ -69,9 +69,10 @@ describe('User', () => {
     const USA = new Country(1, "USA", 79);
     countries = new Countries();
     countries.addCountries(USA);
+    user = new User(35, USA);
 
     user.calculateAge(planets);
-    user.calculateLifeExpectancy();
-    expect(user.lifeExpectancyArray).toEqual([79]);
+    user.calculateLifeExpectancy(planets);
+    expect(user.lifeExpectancyArray).toEqual([79, 19, 49, 148.5, 936.9]);
   });
 });

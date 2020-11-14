@@ -143,7 +143,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly calculate user's life expectancy on all planets and add them to lifeExpectancyArray</td>
     <td>user.calculateLifeExpectancy()</td>
     <td>user.lifeExpectancyArray=[79, 18.9,48.9, 148.5, 936.9]</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 
