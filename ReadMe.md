@@ -13,14 +13,12 @@ If a user has already surpassed the average life expectancy, this app returns th
 
 
 ## <span style="color:#0ec2b8">Setup/Installation Requirements</span>
-### <span style="color:#c4f4ef">View Online</span>
-_Visit [ webpage](https://nataliyazhuravleva.github.io/age-calc/) at https://nataliyazhuravleva.github.io/age-calc/_ to view application on GitHub pages._
-
 ### <span style="color:#c4f4ef">Open Locally</span>
 1. _Navigate to my [Super Galactic Age Calculator repo](https://github.com/NataliyaZhuravleva/age-calc) at https://github.com/NataliyaZhuravleva/age-calc_ to view the project files and commits.
 2. _Click on the green button labeled "Code"_ to copy repository URL.
 3. _Clone the repository to your local machine_ by opening your machine terminal and using the command "git clone https://github.com/NataliyaZhuravleva/age-calc".
-4. _Click on index.html file_ to view application.
+4. _Navigate to the folder "/_tests_" to see test files_
+5. _Navigate to the folder "/src/js" to see javascript files_
 
 
 
@@ -38,11 +36,12 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
 * _VisualStudio Code_
 * _Git_
 * _GitHub_
-* _HTML_
-* _CSS_
-* _JavaScript_
-* _jQuery_
-* _Bootstrap_
+* _HTML/CSS/Bootstrap_
+* _JavaScript. jQuery_
+* _Node_
+* _Npm_
+* _ESLint_
+* _Jest_
 
 ## <span style="color:#0ec2b8">Specs</span>
 
