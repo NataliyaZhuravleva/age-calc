@@ -122,7 +122,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly create Countries class with countriesArray</td>
     <td>countries.countriesArray[0]</td>
     <td>{ "id": 1, "name": "USA", "averageLifeExpectancy": 79 }</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 
