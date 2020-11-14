@@ -1,4 +1,4 @@
-import Country from '../src/js/country.js'
+import Country from '../src/js/country.js';
 
 describe('Country', ()=>{
   let country;
