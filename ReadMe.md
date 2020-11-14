@@ -129,7 +129,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly add countries to countriesArray</td>
     <td>countries.addCountries(USA)</td>
     <td>countries.countriesArray=[USA]</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 

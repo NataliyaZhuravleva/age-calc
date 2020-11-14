@@ -4,6 +4,6 @@ export default class Countries {
   }
 
   addCountries(country) {
- 
+    this.countriesArray.push(country);
   }
 }
