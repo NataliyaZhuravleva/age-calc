@@ -10,4 +10,8 @@ export default class User {
       this.agesArray.push(parseFloat((this.age*element.ratio).toFixed(1)));
     },this);
   }
+  
+  calculateLifeExpectancy(){
+
+  }
 }

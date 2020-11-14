@@ -1,13 +1,17 @@
 import User from '../src/js/user.js';
 import Planet from '../src/js/planet.js';
 import Planets from '../src/js/planets';
+import Country from '../src/js/country.js';
+import Countries from '../src/js/countries.js';
 
 
 describe('User', () => {
   let user;
   let planets;
+  let countries;
   beforeEach(() => {
     user = new User(35, "USA");
+
   });
 
   test("Should correctly create User class with user's age", () => {
@@ -26,11 +30,26 @@ describe('User', () => {
     planets.addPlanets(Mars);
     planets.addPlanets(Jupiter);
     user.calculateAge(planets);
-  
+
     expect(user.agesArray).toEqual([35, 8.4, 21.7, 65.8, 415.1]);
   });
 
   test("Should correctly create User class with user's country", () => {
     expect(user.country).toEqual("USA");
+  });
+
+  test("Should correctly calculate user's life expectancy on Earth and add it to lifeExpectancyArray", () => {
+    const Earth = new Planet("Earth", 1);
+    planets = new Planets();
+    planets.addPlanets(Earth);
+
+    const USA = new Country(1, "USA", 79);
+    countries = new Countries();
+    countries.addCountries(USA);
+
+    user.calculateAge(planets);
+    user.calculateLifeExpectancy(countries);
+
+    expect(user.agesArray).toEqual([35, 8.4, 21.7, 65.8, 415.1]);
   });
 });
