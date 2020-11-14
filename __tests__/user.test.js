@@ -9,15 +9,13 @@ describe('User', () => {
   let user;
   let planets;
   let countries;
-  beforeEach(() => {
-    user = new User(35, "USA");
-
-  });
 
   test("Should correctly create User class with user's age", () => {
+    user = new User(35, "USA");
     expect(user.age).toEqual(35);
   });
   test("Should correctly calculate user's age in planet years and add them to agesArray", () => {
+    user = new User(35, "USA");
     const Earth = new Planet("Earth", 1);
     const Mercury = new Planet("Mercury", 0.24);
     const Venus = new Planet("Venus", 0.62);
@@ -35,7 +33,9 @@ describe('User', () => {
   });
 
   test("Should correctly create User class with user's country", () => {
-    expect(user.country).toEqual("USA");
+    const USA = new Country(1, "USA", 79);
+    user = new User(35, USA);
+    expect(user.country).toEqual(USA);
   });
 
   test("Should correctly calculate user's life expectancy on Earth and add it to lifeExpectancyArray", () => {
@@ -48,8 +48,8 @@ describe('User', () => {
     countries.addCountries(USA);
 
     user.calculateAge(planets);
-    user.calculateLifeExpectancy(countries);
-
-    expect(user.agesArray).toEqual([35, 8.4, 21.7, 65.8, 415.1]);
+    user.calculateLifeExpectancy();
+    //expect(user.country.averageLifeExpectancy).toEqual(79);
+    expect(user.lifeExpectancyArray).toEqual([79]);
   });
 });

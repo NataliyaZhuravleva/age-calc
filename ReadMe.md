@@ -134,9 +134,9 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
   <tr>
     <td>11</td>
     <td>Should correctly calculate user's life expectancy on Earth and add it to lifeExpectancyArray</td>
-    <td>user.calculateLifeExpectancy(USA)</td>
-    <td>user.lifeExpectancyArray=[79, 18.9, 48.9, 148.5, 936.9]</td>
-    <td>False</td>
+    <td>user.calculateLifeExpectancy()</td>
+    <td>user.lifeExpectancyArray=[79]</td>
+    <td>True</td>
   </tr>
 </table>
 
