@@ -3,7 +3,7 @@ import Planet from '../src/js/planet.js';
 describe('Planet', ()=>{
   let planet;
 
-  test("Should correctly create User class with user's age",()=>{
+  test("Should correctly create Planet class with planet's name",()=>{
     planet=new Planet("Earth");
     expect(planet.name).toEqual("Earth");
   });

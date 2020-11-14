@@ -103,6 +103,21 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>"USA"</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>8</td>
+    <td>Should correctly create Country class with id, country name and averageLifeExpectancy</td>
+    <td>
+        user.id<br>
+        user.name<br>
+        user.averageLifeExpectancy
+    </td>
+    <td>
+        1<br>
+        "USA"<br>
+        79
+    </td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 
