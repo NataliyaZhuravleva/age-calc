@@ -3,4 +3,7 @@ export default class Countries {
     this.countriesArray = [];
   }
 
+  addCountries(country) {
+ 
+  }
 }

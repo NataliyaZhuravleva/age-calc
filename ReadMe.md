@@ -124,6 +124,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>{ "id": 1, "name": "USA", "averageLifeExpectancy": 79 }</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>10</td>
+    <td>Should correctly add countries to countriesArray</td>
+    <td>countries.addCountries(USA)</td>
+    <td>countries.countriesArray=[USA]</td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 
