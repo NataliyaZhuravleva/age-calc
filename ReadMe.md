@@ -152,6 +152,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>user.lifeExpectancyArray=[4, 0.9, 2.5, 7.5, 47.5]</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>14</td>
+    <td>Should correctly calculate the number of years user has left to live on each planet if applicable and add it to leftToLiveArray</td>
+    <td>user.calculateLifeExpectancy(planets)</td>
+    <td>user.leftToLiveArray=[44, 10.5, 27.2, 82.7, 521.8]</td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 
