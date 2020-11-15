@@ -9,9 +9,11 @@ export default class User {
   }
 
   calculateAge(planets) {
+    let calculateAgeString="";
     planets.planetsArray.forEach(function (element) {
       this.agesArray.push(parseFloat((this.age * element.ratio).toFixed(1)));
     }, this);
+    return calculateAgeString="Test";
   }
 
   calculateLifeExpectancy(planets) {

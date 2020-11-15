@@ -101,7 +101,7 @@ describe('User', () => {
     expect(user.pastLifeExpectancyArray).toEqual([4, 0.9, 2.5, 7.5, 47.5]);
   });
 
-  test("Should correctly calculate the number of years user have lived past the life expectancy if applicable and add it to pastLifeExpectancyArray", () => {
+  test("Should correctly calculate the number of years user has left to live on each planet if applicable and add it to leftToLiveArray", () => {
 
     const Earth = new Planet("Earth", 1);
     const Mercury = new Planet("Mercury", 0.24);
@@ -123,5 +123,22 @@ describe('User', () => {
     user.calculateAge(planets);
     user.calculateLifeExpectancy(planets);
     expect(user.leftToLiveArray).toEqual([44, 10.6, 27.3, 82.7, 521.8]);
+  });
+  test("Should correctly return result string with user's age in planet years on each planet", () => {
+    user = new User(35, "USA");
+    const Earth = new Planet("Earth", 1);
+    const Mercury = new Planet("Mercury", 0.24);
+    const Venus = new Planet("Venus", 0.62);
+    const Mars = new Planet("Mars", 1.88);
+    const Jupiter = new Planet("Jupiter", 11.86);
+    planets = new Planets();
+    planets.addPlanets(Earth);
+    planets.addPlanets(Mercury);
+    planets.addPlanets(Venus);
+    planets.addPlanets(Mars);
+    planets.addPlanets(Jupiter);
+    let calculateAgeString;
+    user.calculateAge(planets);
+    expect(calculateAgeString).toEqual("Your age in Earth years is 35, your age in Mercury years is 8.4, now you are 21.7 in Venus years, and 65.8 in Mars years. And you are too old on Jupiter. You are 415.1 there!")
   });
 });

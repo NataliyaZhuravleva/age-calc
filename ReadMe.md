@@ -159,6 +159,13 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>user.leftToLiveArray=[44, 10.6, 27.3, 82.7, 521.8]</td>
     <td>True</td>
   </tr>
+  <tr>
+    <td>15</td>
+    <td>Should correctly return result string with user's age in planet years on each planet</td>
+    <td>user.calculateAge(35)</td>
+    <td>calculateAgeString="Your age in Earth years is 35, your age in Mercury years is 8.4, now you are 21.7 in Venus years, and 65.8 in Mars years. And you are too old on Jupiter. You are 415.1 there!"</td>
+    <td>False</td>
+  </tr>
 </table>
 
 ### <span style="color:#0ec2b8">License</span> 
