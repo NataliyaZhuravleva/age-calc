@@ -116,4 +116,15 @@ describe('User', () => {
     expect(calculateLeftToLiveString).toEqual(`You should be alive 44 years more in Earth years. You should be alive 10.6 years more in Mercury years. You should be alive 27.3 years more in Venus years. You should be alive 82.7 years more in Mars years. You should be alive 521.8 years more in Jupiter years.`);
   });
 
+  test("Should correctly return result string with the number of years the user has past the life expectancy on each planet", () => {
+    const USA = new Country(1, "USA", 79);
+    countries = new Countries();
+    countries.addCountries(USA);
+    user = new User(83, USA);
+    user.calculateAge(planets);
+    user.calculateLifeExpectancy(planets);
+    let calculatePastLifeExpectancyString= user.calculateLeftToLive(planets);
+    expect(calculatePastLifeExpectancyString).toEqual(`You have already exceeded the average life expectancy by 4 years in Earth years. You have already exceeded the average life expectancy by 0.9 years in Mercury years. You have already exceeded the average life expectancy by 2.5 years in Venus years. You have already exceeded the average life expectancy by 7.5 years in Mars years. You have already exceeded the average life expectancy by 47.5 years in Jupiter years.`);
+  });
+
 });

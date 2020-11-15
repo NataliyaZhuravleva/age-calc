@@ -33,6 +33,7 @@ export default class User {
 
   calculateLeftToLive(planets) {
     let calculateLeftToLiveString = ``;
+    let calculatePastLifeExpectancyString = ``;
     if (this.age < this.country.averageLifeExpectancy) {
       for (let i = 0; i < this.agesArray.length; i++) {
         this.leftToLiveArray[i] = parseFloat((this.lifeExpectancyArray[i] - this.agesArray[i]).toFixed(1));
@@ -43,8 +44,9 @@ export default class User {
     } else {
       for (let i = 0; i < this.agesArray.length; i++) {
         this.pastLifeExpectancyArray[i] = parseFloat((this.agesArray[i] - this.lifeExpectancyArray[i]).toFixed(1));
+        calculatePastLifeExpectancyString="";
       }
-      return this.pastLifeExpectancyArray;
+      return calculatePastLifeExpectancyString;
     }
   }
 }
