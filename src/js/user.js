@@ -22,6 +22,9 @@ export default class User {
 
 
     if (this.age < this.country.averageLifeExpectancy) {
+      for (let i = 0; i < this.agesArray.length; i++) {
+        this.leftToLiveArray[i] = parseFloat((this.lifeExpectancyArray[i] - this.agesArray[i]).toFixed(1));
+      }
       return this.lifeExpectancyArray;
     } else {
       for (let i = 0; i < this.agesArray.length; i++) {

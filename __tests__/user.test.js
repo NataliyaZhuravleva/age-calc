@@ -122,6 +122,6 @@ describe('User', () => {
 
     user.calculateAge(planets);
     user.calculateLifeExpectancy(planets);
-    expect(user.leftToLiveArray).toEqual([44, 10.5, 27.2, 82.7, 521.8]);
+    expect(user.leftToLiveArray).toEqual([44, 10.6, 27.3, 82.7, 521.8]);
   });
 });
