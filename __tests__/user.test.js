@@ -40,6 +40,10 @@ describe('User', () => {
 
   test("Should correctly calculate user's life expectancy on Earth and add it to lifeExpectancyArray", () => {
     const Earth = new Planet("Earth", 1);
+    const Mercury = new Planet("Mercury", 0.24);
+    const Venus = new Planet("Venus", 0.62);
+    const Mars = new Planet("Mars", 1.88);
+    const Jupiter = new Planet("Jupiter", 11.86);
     planets = new Planets();
     planets.addPlanets(Earth);
 
@@ -137,8 +141,9 @@ describe('User', () => {
     planets.addPlanets(Venus);
     planets.addPlanets(Mars);
     planets.addPlanets(Jupiter);
-    let calculateAgeString;
-    user.calculateAge(planets);
-    expect(calculateAgeString).toEqual("Your age in Earth years is 35, your age in Mercury years is 8.4, now you are 21.7 in Venus years, and 65.8 in Mars years. And you are too old on Jupiter. You are 415.1 there!")
+    let calculateAgeString = user.calculateAge(planets);
+    expect(calculateAgeString).toEqual(`Your age in Earth years is 35. Your age in Mercury years is 8.4. Your age in Venus years is 21.7. Your age in Mars years is 65.8. Your age in Jupiter years is 415.1.`);
   });
+
+
 });

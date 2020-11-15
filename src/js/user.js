@@ -9,11 +9,15 @@ export default class User {
   }
 
   calculateAge(planets) {
-    let calculateAgeString="";
-    planets.planetsArray.forEach(function (element) {
-      this.agesArray.push(parseFloat((this.age * element.ratio).toFixed(1)));
-    }, this);
-    return calculateAgeString="Test";
+    let calculateAgeString = ``;
+
+    for (let i = 0; i < planets.planetsArray.length; i++) {
+      this.agesArray.push(parseFloat((this.age * planets.planetsArray[i].ratio).toFixed(1)));
+      calculateAgeString += `Your age in ${planets.planetsArray[i].name} years is ${this.agesArray[i]}. `;
+    }
+    calculateAgeString = calculateAgeString.substring(0, calculateAgeString.length - 1);
+    return calculateAgeString;
+
   }
 
   calculateLifeExpectancy(planets) {
