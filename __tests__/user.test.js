@@ -86,7 +86,7 @@ describe('User', () => {
 
     user.calculateAge(planets);
     user.calculateLifeExpectancy(planets);
-    user.calculateLeftToLive();
+    user.calculateLeftToLive(planets);
     expect(user.leftToLiveArray).toEqual([44, 10.6, 27.3, 82.7, 521.8]);
   });
   test("Should correctly return result string with user's age in planet years on each planet", () => {
@@ -112,8 +112,8 @@ describe('User', () => {
     user = new User(35, USA);
     user.calculateAge(planets);
     user.calculateLifeExpectancy(planets);
-    let calculateLeftToLiveString= user.calculateLeftToLive();
-    expect(calculateLeftToLiveString).toEqual(`You should be alive 44 years more in Earth years. You should be alive 10.6 years more in Mercury years.You should be alive 27.3 years more in Venus years.You should be alive 82.7 years more in Mars years.You should be alive 521.8 years more in Jupiter years.`);
+    let calculateLeftToLiveString= user.calculateLeftToLive(planets);
+    expect(calculateLeftToLiveString).toEqual(`You should be alive 44 years more in Earth years. You should be alive 10.6 years more in Mercury years. You should be alive 27.3 years more in Venus years. You should be alive 82.7 years more in Mars years. You should be alive 521.8 years more in Jupiter years.`);
   });
 
 });

@@ -178,7 +178,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly return result string with user's left to live years on each planet</td>
     <td>user.calculateLeftToLive()</td>
     <td>calculateLeftToLiveString="You should be alive 44 years more in Earth years. You should be alive 10.6 years more in Mercury years.You should be alive 27.3 years more in Venus years.You should be alive 82.7 years more in Mars years.You should be alive 521.8 years more in Jupiter years."</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 

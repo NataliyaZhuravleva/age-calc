@@ -31,13 +31,14 @@ export default class User {
     return calculateLifeExpectancyString;
   }
 
-  calculateLeftToLive() {
-    let calculateLeftToLiveString=``;
+  calculateLeftToLive(planets) {
+    let calculateLeftToLiveString = ``;
     if (this.age < this.country.averageLifeExpectancy) {
       for (let i = 0; i < this.agesArray.length; i++) {
         this.leftToLiveArray[i] = parseFloat((this.lifeExpectancyArray[i] - this.agesArray[i]).toFixed(1));
-        calculateLeftToLiveString="";
+        calculateLeftToLiveString += `You should be alive ${this.leftToLiveArray[i]} years more in ${planets.planetsArray[i].name} years. `;
       }
+      calculateLeftToLiveString = calculateLeftToLiveString.substring(0, calculateLeftToLiveString.length - 1);
       return calculateLeftToLiveString;
     } else {
       for (let i = 0; i < this.agesArray.length; i++) {
