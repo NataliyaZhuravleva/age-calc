@@ -74,6 +74,7 @@ describe('User', () => {
 
     user.calculateAge(planets);
     user.calculateLifeExpectancy(planets);
+    user.calculateLeftToLive();
     expect(user.pastLifeExpectancyArray).toEqual([4, 0.9, 2.5, 7.5, 47.5]);
   });
 
@@ -85,6 +86,7 @@ describe('User', () => {
 
     user.calculateAge(planets);
     user.calculateLifeExpectancy(planets);
+    user.calculateLeftToLive();
     expect(user.leftToLiveArray).toEqual([44, 10.6, 27.3, 82.7, 521.8]);
   });
   test("Should correctly return result string with user's age in planet years on each planet", () => {
