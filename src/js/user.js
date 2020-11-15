@@ -32,11 +32,13 @@ export default class User {
   }
 
   calculateLeftToLive() {
+    let calculateLeftToLiveString=``;
     if (this.age < this.country.averageLifeExpectancy) {
       for (let i = 0; i < this.agesArray.length; i++) {
         this.leftToLiveArray[i] = parseFloat((this.lifeExpectancyArray[i] - this.agesArray[i]).toFixed(1));
+        calculateLeftToLiveString="";
       }
-      return this.lifeExpectancyArray;
+      return calculateLeftToLiveString;
     } else {
       for (let i = 0; i < this.agesArray.length; i++) {
         this.pastLifeExpectancyArray[i] = parseFloat((this.agesArray[i] - this.lifeExpectancyArray[i]).toFixed(1));

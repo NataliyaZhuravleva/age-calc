@@ -10,7 +10,7 @@ describe('User', () => {
   let planets;
   let countries;
 
-  beforeEach(()=>{
+  beforeEach(() => {
     const Earth = new Planet("Earth", 1);
     const Mercury = new Planet("Mercury", 0.24);
     const Venus = new Planet("Venus", 0.62);
@@ -22,14 +22,14 @@ describe('User', () => {
     planets.addPlanets(Venus);
     planets.addPlanets(Mars);
     planets.addPlanets(Jupiter);
-  }); 
+  });
 
   test("Should correctly create User class with user's age", () => {
     user = new User(35, "USA");
     expect(user.age).toEqual(35);
   });
   test("Should correctly calculate user's age in planet years and add them to agesArray", () => {
-    user = new User(35, "USA");   
+    user = new User(35, "USA");
     user.calculateAge(planets);
     expect(user.agesArray).toEqual([35, 8.4, 21.7, 65.8, 415.1]);
   });
@@ -39,7 +39,7 @@ describe('User', () => {
     user = new User(35, USA);
     expect(user.country).toEqual(USA);
   });
-  
+
   test("Should correctly calculate user's life expectancy on Earth and add it to lifeExpectancyArray", () => {
     const Earth = new Planet("Earth", 1);
     planets = new Planets();
@@ -101,8 +101,19 @@ describe('User', () => {
     countries.addCountries(USA);
     user = new User(35, USA);
     user.calculateAge(planets);
-    let calculateLifeExpectancyString=user.calculateLifeExpectancy(planets);
+    let calculateLifeExpectancyString = user.calculateLifeExpectancy(planets);
     expect(calculateLifeExpectancyString).toEqual(`Your life expectancy age in Earth years is 79. Your life expectancy age in Mercury years is 19. Your life expectancy age in Venus years is 49. Your life expectancy age in Mars years is 148.5. Your life expectancy age in Jupiter years is 936.9.`);
+  });
+
+  test("Should correctly return result string with user's left to live years on each planet", () => {
+    const USA = new Country(1, "USA", 79);
+    countries = new Countries();
+    countries.addCountries(USA);
+    user = new User(35, USA);
+    user.calculateAge(planets);
+    user.calculateLifeExpectancy(planets);
+    let calculateLeftToLiveString= user.calculateLeftToLive();
+    expect(calculateLeftToLiveString).toEqual(`You should be alive 44 years more in Earth years. You should be alive 10.6 years more in Mercury years.You should be alive 27.3 years more in Venus years.You should be alive 82.7 years more in Mars years.You should be alive 521.8 years more in Jupiter years.`);
   });
 
 });
