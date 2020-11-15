@@ -145,5 +145,22 @@ describe('User', () => {
     expect(calculateAgeString).toEqual(`Your age in Earth years is 35. Your age in Mercury years is 8.4. Your age in Venus years is 21.7. Your age in Mars years is 65.8. Your age in Jupiter years is 415.1.`);
   });
 
+  test("Should correctly return result string with user's life expectancy in planet years on each planet", () => {
+    user = new User(35, "USA");
+    const Earth = new Planet("Earth", 1);
+    const Mercury = new Planet("Mercury", 0.24);
+    const Venus = new Planet("Venus", 0.62);
+    const Mars = new Planet("Mars", 1.88);
+    const Jupiter = new Planet("Jupiter", 11.86);
+    planets = new Planets();
+    planets.addPlanets(Earth);
+    planets.addPlanets(Mercury);
+    planets.addPlanets(Venus);
+    planets.addPlanets(Mars);
+    planets.addPlanets(Jupiter);
+    user.calculateAge(planets);
+    let calculateLifeExpectancyString = user.calculateLifeExpectancy(planets);
+    expect(calculateLifeExpectancyString).toEqual(`Your life expectancy age in Earth years is 79. Your life expectancy age in Mercury years is 18.9. Your life expectancy age in Venus years is 48.9. Your life expectancy age in Mars is 148.5. Your life expectancy age in  Jupiter is 936.9.`);
+  });
 
 });

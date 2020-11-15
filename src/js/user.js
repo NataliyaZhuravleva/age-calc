@@ -21,7 +21,7 @@ export default class User {
   }
 
   calculateLifeExpectancy(planets) {
-
+    let calculateLifeExpectancyString=``;
     planets.planetsArray.forEach(function (element) {
       this.lifeExpectancyArray.push(parseFloat((this.country.averageLifeExpectancy * element.ratio).toFixed(1)));
     }, this);
