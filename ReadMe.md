@@ -150,14 +150,14 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly calculate the number of years user have lived past the life expectancy if applicable and add it to pastLifeExpectancyArray</td>
     <td>user.calculateLifeExpectancy(planets)</td>
     <td>user.lifeExpectancyArray=[4, 0.9, 2.5, 7.5, 47.5]</td>
-    <td>True</td>
+    <td>False</td>
   </tr>
   <tr>
     <td>14</td>
     <td>Should correctly calculate the number of years user has left to live on each planet if applicable and add it to leftToLiveArray</td>
     <td>user.calculateLifeExpectancy(planets)</td>
     <td>user.leftToLiveArray=[44, 10.6, 27.3, 82.7, 521.8]</td>
-    <td>True</td>
+    <td>False</td>
   </tr>
   <tr>
     <td>15</td>
@@ -171,7 +171,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly return result string with user's life expectancy in planet years on each planet</td>
     <td>user.calculateLifeExpectancy(planets)</td>
     <td>calculateLifeExpectancyString="Your life expectancy age in Earth years is 79. Your life expectancy age in Mercury years is 18.9. Your life expectancy age in Venus years is 48.9. Your life expectancy age in Mars is 148.5. Your life expectancy age in  Jupiter is 936.9."</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 

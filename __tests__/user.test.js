@@ -10,12 +10,7 @@ describe('User', () => {
   let planets;
   let countries;
 
-  test("Should correctly create User class with user's age", () => {
-    user = new User(35, "USA");
-    expect(user.age).toEqual(35);
-  });
-  test("Should correctly calculate user's age in planet years and add them to agesArray", () => {
-    user = new User(35, "USA");
+  beforeEach(()=>{
     const Earth = new Planet("Earth", 1);
     const Mercury = new Planet("Mercury", 0.24);
     const Venus = new Planet("Venus", 0.62);
@@ -27,8 +22,15 @@ describe('User', () => {
     planets.addPlanets(Venus);
     planets.addPlanets(Mars);
     planets.addPlanets(Jupiter);
-    user.calculateAge(planets);
+  }); 
 
+  test("Should correctly create User class with user's age", () => {
+    user = new User(35, "USA");
+    expect(user.age).toEqual(35);
+  });
+  test("Should correctly calculate user's age in planet years and add them to agesArray", () => {
+    user = new User(35, "USA");   
+    user.calculateAge(planets);
     expect(user.agesArray).toEqual([35, 8.4, 21.7, 65.8, 415.1]);
   });
 
@@ -37,13 +39,9 @@ describe('User', () => {
     user = new User(35, USA);
     expect(user.country).toEqual(USA);
   });
-
+  
   test("Should correctly calculate user's life expectancy on Earth and add it to lifeExpectancyArray", () => {
     const Earth = new Planet("Earth", 1);
-    const Mercury = new Planet("Mercury", 0.24);
-    const Venus = new Planet("Venus", 0.62);
-    const Mars = new Planet("Mars", 1.88);
-    const Jupiter = new Planet("Jupiter", 11.86);
     planets = new Planets();
     planets.addPlanets(Earth);
 
@@ -58,19 +56,6 @@ describe('User', () => {
   });
 
   test("Should correctly calculate user's life expectancy on all planets and add them to lifeExpectancyArray", () => {
-
-    const Earth = new Planet("Earth", 1);
-    const Mercury = new Planet("Mercury", 0.24);
-    const Venus = new Planet("Venus", 0.62);
-    const Mars = new Planet("Mars", 1.88);
-    const Jupiter = new Planet("Jupiter", 11.86);
-    planets = new Planets();
-    planets.addPlanets(Earth);
-    planets.addPlanets(Mercury);
-    planets.addPlanets(Venus);
-    planets.addPlanets(Mars);
-    planets.addPlanets(Jupiter);
-
     const USA = new Country(1, "USA", 79);
     countries = new Countries();
     countries.addCountries(USA);
@@ -82,19 +67,6 @@ describe('User', () => {
   });
 
   test("Should correctly calculate the number of years user have lived past the life expectancy if applicable and add it to pastLifeExpectancyArray", () => {
-
-    const Earth = new Planet("Earth", 1);
-    const Mercury = new Planet("Mercury", 0.24);
-    const Venus = new Planet("Venus", 0.62);
-    const Mars = new Planet("Mars", 1.88);
-    const Jupiter = new Planet("Jupiter", 11.86);
-    planets = new Planets();
-    planets.addPlanets(Earth);
-    planets.addPlanets(Mercury);
-    planets.addPlanets(Venus);
-    planets.addPlanets(Mars);
-    planets.addPlanets(Jupiter);
-
     const USA = new Country(1, "USA", 79);
     countries = new Countries();
     countries.addCountries(USA);
@@ -106,19 +78,6 @@ describe('User', () => {
   });
 
   test("Should correctly calculate the number of years user has left to live on each planet if applicable and add it to leftToLiveArray", () => {
-
-    const Earth = new Planet("Earth", 1);
-    const Mercury = new Planet("Mercury", 0.24);
-    const Venus = new Planet("Venus", 0.62);
-    const Mars = new Planet("Mars", 1.88);
-    const Jupiter = new Planet("Jupiter", 11.86);
-    planets = new Planets();
-    planets.addPlanets(Earth);
-    planets.addPlanets(Mercury);
-    planets.addPlanets(Venus);
-    planets.addPlanets(Mars);
-    planets.addPlanets(Jupiter);
-
     const USA = new Country(1, "USA", 79);
     countries = new Countries();
     countries.addCountries(USA);
@@ -130,37 +89,18 @@ describe('User', () => {
   });
   test("Should correctly return result string with user's age in planet years on each planet", () => {
     user = new User(35, "USA");
-    const Earth = new Planet("Earth", 1);
-    const Mercury = new Planet("Mercury", 0.24);
-    const Venus = new Planet("Venus", 0.62);
-    const Mars = new Planet("Mars", 1.88);
-    const Jupiter = new Planet("Jupiter", 11.86);
-    planets = new Planets();
-    planets.addPlanets(Earth);
-    planets.addPlanets(Mercury);
-    planets.addPlanets(Venus);
-    planets.addPlanets(Mars);
-    planets.addPlanets(Jupiter);
     let calculateAgeString = user.calculateAge(planets);
     expect(calculateAgeString).toEqual(`Your age in Earth years is 35. Your age in Mercury years is 8.4. Your age in Venus years is 21.7. Your age in Mars years is 65.8. Your age in Jupiter years is 415.1.`);
   });
 
   test("Should correctly return result string with user's life expectancy in planet years on each planet", () => {
-    user = new User(35, "USA");
-    const Earth = new Planet("Earth", 1);
-    const Mercury = new Planet("Mercury", 0.24);
-    const Venus = new Planet("Venus", 0.62);
-    const Mars = new Planet("Mars", 1.88);
-    const Jupiter = new Planet("Jupiter", 11.86);
-    planets = new Planets();
-    planets.addPlanets(Earth);
-    planets.addPlanets(Mercury);
-    planets.addPlanets(Venus);
-    planets.addPlanets(Mars);
-    planets.addPlanets(Jupiter);
+    const USA = new Country(1, "USA", 79);
+    countries = new Countries();
+    countries.addCountries(USA);
+    user = new User(35, USA);
     user.calculateAge(planets);
-    let calculateLifeExpectancyString = user.calculateLifeExpectancy(planets);
-    expect(calculateLifeExpectancyString).toEqual(`Your life expectancy age in Earth years is 79. Your life expectancy age in Mercury years is 18.9. Your life expectancy age in Venus years is 48.9. Your life expectancy age in Mars is 148.5. Your life expectancy age in  Jupiter is 936.9.`);
+    let calculateLifeExpectancyString=user.calculateLifeExpectancy(planets);
+    expect(calculateLifeExpectancyString).toEqual(`Your life expectancy age in Earth years is 79. Your life expectancy age in Mercury years is 19. Your life expectancy age in Venus years is 49. Your life expectancy age in Mars years is 148.5. Your life expectancy age in Jupiter years is 936.9.`);
   });
 
 });
