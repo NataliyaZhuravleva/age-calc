@@ -149,8 +149,8 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>13</td>
     <td>Should correctly calculate the number of years user have lived past the life expectancy if applicable and add it to pastLifeExpectancyArray</td>
     <td>user.calculateLifeExpectancy(planets)</td>
-    <td>user.lifeExpectancyArray=[4, 1, 2.5, 7.5, 47.4]</td>
-    <td>False</td>
+    <td>user.lifeExpectancyArray=[4, 0.9, 2.5, 7.5, 47.5]</td>
+    <td>True</td>
   </tr>
 </table>
 

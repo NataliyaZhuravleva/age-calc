@@ -14,12 +14,17 @@ export default class User {
   }
 
   calculateLifeExpectancy(planets) {
+
+    planets.planetsArray.forEach(function (element) {
+      this.lifeExpectancyArray.push(parseFloat((this.country.averageLifeExpectancy * element.ratio).toFixed(1)));
+    }, this);
     if (this.age < this.country.averageLifeExpectancy) {
-      planets.planetsArray.forEach(function (element) {
-        this.lifeExpectancyArray.push(parseFloat((this.country.averageLifeExpectancy * element.ratio).toFixed(1)));
-      }, this);
+      return this.lifeExpectancyArray;
     } else {
-      
+      for (let i=0; i<this.agesArray.length; i++) {
+        this.pastLifeExpectancyArray[i]= parseFloat((this.agesArray[i] - this.lifeExpectancyArray[i]).toFixed(1));
+      }
+      return this.pastLifeExpectancyArray;
     }
   }
 }

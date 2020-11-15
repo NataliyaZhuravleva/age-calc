@@ -1,15 +1,15 @@
 import Planet from '../src/js/planet.js';
 
-describe('Planet', ()=>{
+describe('Planet', () => {
   let planet;
 
-  test("Should correctly create Planet class with planet's name",()=>{
-    planet=new Planet("Earth");
+  test("Should correctly create Planet class with planet's name", () => {
+    planet = new Planet("Earth");
     expect(planet.name).toEqual("Earth");
   });
 
-  test("Should correctly create Planet class with planet's name and ratio", ()=>{
-    planet=new Planet("Mercury", 0.24);
+  test("Should correctly create Planet class with planet's name and ratio", () => {
+    planet = new Planet("Mercury", 0.24);
     expect(planet.name).toEqual("Mercury");
     expect(planet.ratio).toEqual(0.24);
   });
