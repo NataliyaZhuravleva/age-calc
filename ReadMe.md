@@ -185,7 +185,7 @@ _If you have any questions, ideas or concerns, please, contact me at [natalindri
     <td>Should correctly return result string with the number of years the user has past the life expectancy on each planet</td>
     <td>user.calculateLeftToLive(planets)</td>
     <td>calculatePastLifeExpectancyString="You have already exceeded the average life expectancy by 4 years in Earth years. You have already exceeded the average life expectancy by 0.9 years in Mercury years. You have already exceeded the average life expectancy by 2.5 years in Venus years. You have already exceeded the average life expectancy by 7.5 years in Mars years. You have already exceeded the average life expectancy by 47.5 years in Jupiter years."</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 

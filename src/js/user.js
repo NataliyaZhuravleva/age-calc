@@ -34,6 +34,7 @@ export default class User {
   calculateLeftToLive(planets) {
     let calculateLeftToLiveString = ``;
     let calculatePastLifeExpectancyString = ``;
+
     if (this.age < this.country.averageLifeExpectancy) {
       for (let i = 0; i < this.agesArray.length; i++) {
         this.leftToLiveArray[i] = parseFloat((this.lifeExpectancyArray[i] - this.agesArray[i]).toFixed(1));
@@ -41,11 +42,13 @@ export default class User {
       }
       calculateLeftToLiveString = calculateLeftToLiveString.substring(0, calculateLeftToLiveString.length - 1);
       return calculateLeftToLiveString;
+      
     } else {
       for (let i = 0; i < this.agesArray.length; i++) {
         this.pastLifeExpectancyArray[i] = parseFloat((this.agesArray[i] - this.lifeExpectancyArray[i]).toFixed(1));
-        calculatePastLifeExpectancyString="";
+        calculatePastLifeExpectancyString += `You have already exceeded the average life expectancy by ${this.pastLifeExpectancyArray[i]} years in ${planets.planetsArray[i].name} years. `;
       }
+      calculatePastLifeExpectancyString = calculatePastLifeExpectancyString.substring(0, calculatePastLifeExpectancyString.length - 1);
       return calculatePastLifeExpectancyString;
     }
   }

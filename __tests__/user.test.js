@@ -74,7 +74,7 @@ describe('User', () => {
 
     user.calculateAge(planets);
     user.calculateLifeExpectancy(planets);
-    user.calculateLeftToLive();
+    user.calculateLeftToLive(planets);
     expect(user.pastLifeExpectancyArray).toEqual([4, 0.9, 2.5, 7.5, 47.5]);
   });
 
